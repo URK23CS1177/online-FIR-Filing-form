@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online FIR Filing Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f3;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        form {
+            background: #fff;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        textarea {
+            resize: vertical;
+        }
+        button {
+            margin-top: 20px;
+            width: 100%;
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #21618c;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Online FIR Filing Form</h2>
+
+<form action="#" method="post">
+    <label for="fullname">Full Name:</label>
+    <input type="text" id="fullname" name="fullname" required>
+
+    <label for="contact">Contact Number:</label>
+    <input type="tel" id="contact" name="contact" required pattern="[0-9]{10}" placeholder="10-digit mobile number">
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email">
+
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" rows="3" required></textarea>
+
+    <label for="incident_date">Date of Incident:</label>
+    <input type="date" id="incident_date" name="incident_date" required>
+
+    <label for="location">Location of Incident:</label>
+    <input type="text" id="location" name="location" required>
+
+    <label for="incident_type">Type of Incident:</label>
+    <select id="incident_type" name="incident_type" required>
+        <option value="">--Select--</option>
+        <option value="theft">Theft</option>
+        <option value="assault">Assault</option>
+        <option value="fraud">Fraud</option>
+        <option value="harassment">Harassment</option>
+        <option value="cybercrime">Cybercrime</option>
+        <option value="other">Other</option>
+    </select>
+
+    <label for="description">Incident Description:</label>
+    <textarea id="description" name="description" rows="5" required></textarea>
+
+    <button type="submit">Submit FIR</button>
+</form>
+
+</body>
+</html>
